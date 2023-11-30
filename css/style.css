@@ -1,0 +1,1078 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: antiquewhite;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .6);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(143, 143, 143);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.conatiner {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 300px;
+    border: none;
+    background: rgb(0, 0, 0, .4);
+    backdrop-filter: saturate(180%) blur(5px);
+    outline: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    gap: 30px;
+}
+
+.logo a img {
+    width: auto;
+    height: 50px;
+    margin: 5px 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: .8;
+    transition: .3s ease-in-out;
+}
+
+.logo a img:hover {
+    opacity: 1;
+}
+
+nav ul {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .drop {
+    background: rgb(0, 0, 0, .9);
+    position: absolute;
+    z-index: 998;
+    display: none;
+    min-width: 140px;
+}
+
+nav .drop li a {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+nav ul li:hover .drop {
+    display: block;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    width: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 13px;
+    background-color: transparent;
+    font-size: 16pt;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    opacity: 1;
+    transition: all .3s ease
+}
+
+nav ul li a:hover {
+    opacity: .7;
+    color: #78BE21;
+}
+
+nav ul li h2 {
+    width: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 13px;
+    background-color: transparent;
+    font-size: 16pt;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    opacity: 1;
+    transition: all .3s ease
+}
+
+nav ul li h2:hover {
+    opacity: .7;
+    background: rgba(0, 0 , 0, .5);
+}
+
+nav ul li h2 span {
+    font-size: 15pt;
+    margin-left: 7px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#baner {
+    width: 100%;
+    height: 70vh;
+    background: rgb(0, 0, 0, .6);
+}
+
+#baner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: top;
+    z-index: -1;
+}
+
+.name-title {
+    width: 100%;
+    height: 100%;
+    padding: 130px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.name-title h1 {
+    font-size: 36pt;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 3px 0px;
+    inset: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.row-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.row-img img {
+    position: relative;
+    display: block;
+    width: auto;
+    height: 185px;
+    top: 0;
+    left: 0;
+}
+
+section#opis {
+    min-height: 55vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .6)), url(../img/androidww.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+    padding: 30px 0px;
+}
+
+.opis-place {
+    width: 59%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(0, 0, 0, .76);
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px 10px rgba(29, 29, 29, 0.6);
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+.opis-card {
+    width: 100%;
+    max-height: 90%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    inset: none;
+    border: none;
+    gap: 30px;
+}
+
+.opis-card-content {
+    width: 68%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto 0;
+}
+
+.opis-card-content h1 {
+    font-size: 19pt;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 0px 10px 5px;
+    font-weight: 600;
+}
+
+.opis-card-content p {
+    font-size: 17pt;
+    color: white;
+    text-align: justify;
+    padding: 5px 0px;
+}
+
+.opis-card-content p::first-letter {
+    margin-left: 15px;
+} 
+
+.img-card {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    overflow: hidden;
+}
+
+.img-card img {
+    height: auto;
+    width: 100%;
+    position: block;
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.img-card img:hover {
+    transform: scale(1.04);
+}
+
+section#opis-2 {
+    width: 100%;
+    min-height: 51vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .5)), url(../img/wallpapersden.com_anime-girl-starring-2023-ai-art_1920x1080.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.opis-2-place {
+    width: 65%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    padding: 30px 30px;
+}
+
+.opis-2-conteiner {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 15px;
+    border-radius: 15px;
+    border: none;
+    inset: none;
+    background-color: rgba(0, 0, 0, .75);
+    box-shadow: 0px 0px 20px 13px rgba(0, 0, 0, .3);
+    margin: auto 0;
+}
+
+.opis-2-conteiner h1 {
+    font-size: 19pt;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 0px 8px 5px;
+}
+
+.opis-2-conteiner p {
+    color: white;
+    font-size: 17pt;
+    padding: 5px 0px 10px 0px;
+    text-align: justify;
+}
+
+.opis-2-conteiner p::first-letter {
+    margin-left: 15px;
+}
+
+.img-content {
+    width: 33%;
+    height: auto;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-position: center;
+    transition: .3s ease-in-out;
+}
+
+.img-content img:hover {
+    transform: scale(1.04);
+}
+
+section#gallery {
+    width: 100%;
+    min-height: 40vh;
+    background-color: #121212;
+    padding: 50px 0px;
+}
+
+.gallery-place {
+    width: 82%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.img-content-cont {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+}
+
+.img-content-cont h1 {
+    text-align: center;
+    color: white;
+    font-size: 22pt;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 20px 0px 10px 0px;
+    text-transform: uppercase;
+}
+
+.img-contenter {
+    width: 330px;
+    height: 270px;
+    border-radius: 15px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.img-contenter a {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    outline: 1;
+    position: relative;
+    text-decoration: none;
+}
+
+.img-contenter:hover {
+    transform: scale(1.02);
+    border: 1px solid rgb(252, 252, 252);
+}
+
+.imgg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateZ(0);
+    will-change: translate;
+}
+
+.g-1 {
+    background-image: url(../img/szajs-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-2 {
+    background-image: url(../img/huwawei-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-3 {
+    background-image: url(../img/samsung-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-4 {
+    background-image: url(../img/galaxy-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-1-2 {
+    background-image: url(../img/phone15-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-2-2 {
+    background-image: url(../img/appllee-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-3-2 {
+    background-image: url(../img/ipap12-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-4-2 {
+    background-image: url(../img/iphone-male.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-contenter a h2 {
+    padding: 12px 0px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: saturate(180%) blur(5px);
+    text-align: center;
+    font-size: 17pt;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transform: translateZ(0);
+    will-change: translate;
+    position: relative;
+}
+
+section#opis-2-2 {
+    width: 100%;
+    min-height: 51vh;
+    background-color: #181818;
+    padding: 30px 0px;
+}
+
+
+.opis-2-2-place {
+    width: 65%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+.o-2-2-contr-b {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 20px;
+    padding: 20px 15px 0px 15px;
+}
+
+.o-2-2-contr-b:last-child {
+    padding: 0px 15px 20px 15px;
+}
+
+.opis-2-2-conteiner {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin: auto 0;
+}
+
+.opis-2-2-conteiner h1 {
+    font-size: 19pt;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 0px 8px 5px;
+}
+
+.opis-2-2-conteiner p {
+    color: white;
+    font-size: 17pt;
+    padding: 5px 0px 10px 0px;
+    text-align: justify;
+}
+
+.opis-2-2-conteiner p::first-letter {
+    margin-left: 15px;
+}
+
+.img-content-2-2 {
+    width: 30%;
+    height: auto;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-content-2-2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-position: center;
+    transition: all .3s ease-in-out;
+}
+
+.img-content-2-2 img:hover {
+    transform: scale(1.04);
+}
+
+section#opis-3 {
+    width: 100%;
+    height: 60vh;
+    background: url(../img/769480.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.opis-3-place {
+    width: 66%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opis-3-cont {
+    width: 90%;
+    height: 90%;
+    border: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: saturate(180%) blur(5px);
+}
+
+.o-3-content-b {
+    width: 32%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px 30px;
+    background-color: transparent;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.o-3-content-b ul {
+    width: auto;
+    height: auto;
+}
+
+.o-3-content-b ul li {
+    font-size: 17pt;
+    list-style: circle;
+    color: white;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.o-3-c-b-l {
+    border-left: 2px dashed white;
+}
+
+.o-3-c-b-r {
+    border-right: 2px dashed white;
+}
+
+.o-3-content-center {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    gap: 30px;
+}
+
+.text-cont-cent {
+    width: 100%;
+    height: 180px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.tcc-1 {
+    border-right: 1px solid white;
+    border-bottom: 1px dashed white;
+}
+
+.tcc-2 {
+    border-left: 1px solid white;
+    border-top: 1px dashed white;
+}
+
+.text-cont-cent h1 {
+    font-size: 20pt;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 29px;
+    text-align: center;
+}
+
+section#opis-3-2 {
+    width: 100%;
+    height: 60vh;
+    background: url(../img/android-digital-art-hd-wallpaper-uhdpaper.com-910@0@f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.opis-3-2-place {
+    width: 66%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opis-3-2-cont {
+    width: 90%;
+    height: 90%;
+    border: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: saturate(180%) blur(5px);
+}
+
+.o-3-2-content-b {
+    width: 32%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px 30px;
+    background-color: transparent;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.o-3-2-content-b ul {
+    width: auto;
+    height: 100%;
+}
+
+.o-3-2-content-b ul li {
+    font-size: 17pt;
+    list-style: circle;
+    color: white;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.o-3-2-c-b-l {
+    border-left: 2px dashed white;
+}
+
+.o-3-2-c-b-r {
+    border-right: 2px dashed white;
+}
+
+.o-3-2-content-center {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    gap: 30px;
+}
+
+.text-cont-cent-2 {
+    width: 100%;
+    height: 180px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.tcc-1-2 {
+    border-left: 1px solid white;
+    border-bottom: 1px dashed white;
+}
+
+.tcc-2-2 {
+    border-right: 1px solid white;
+    border-top: 1px dashed white;
+}
+
+.text-cont-cent-2 h1 {
+    font-size: 20pt;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 29px;
+    text-align: center;
+}
+
+
+section#opis-4 {
+    min-height: 40vh;
+    width: 100%;
+    background-color: #181818;
+    padding: 30px 0px;
+}
+
+.opis-4-place {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.o-4-conteiner-b {
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 15px;
+    background: transparent;
+}
+
+.o-4-conteiner-b h1 {
+    color: white;
+    font-size: 19pt;
+    padding: 0px 0px 10px 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.o-4-conteiner-b p {
+    color: white;
+    font-size: 17pt;
+    padding: 0px 0px 10px 0px;
+    text-align: justify;
+}
+
+.o-4-conteiner-b p::first-letter {
+    margin-left: 15px;
+}
+
+.o-4-img-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 20px;
+}
+
+.o-4-img-container img {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-position: center;
+    transition: all .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.o-4-img-container img:hover {
+    transform: scale(1.04);
+}
+
+footer {
+    /*background-color: #161D24;*/
+    background-color: #121212;
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    min-height: 35px;
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.navigation-row {
+    width: 55%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    margin: 0 auto;
+    padding: 0px 0px 5px 0px;
+}
+
+.navigation-f {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.navigation-f ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+.navigation-f ul li a {
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17pt;
+    opacity: 0.7;
+    transition: all .2s ease-in;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navigation-f ul li a:hover {
+    opacity: 1;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials a {
+    text-decoration: none;
+    margin: 7px;
+    border-radius: 50%;  
+}
+
+.socials a i {
+    font-size: 26pt;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+}
+
+.socials a:hover i {
+    color: #4e4e4e;
+}
+
+.brand-logo-rb {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.brand-logo-rb a img {
+    width: auto;
+    height: 59px;
+    display: block;
+    transition: all .2s ease-in-out;
+    opacity: .7;
+}
+
+.brand-logo-rb a img:hover {
+    opacity: 1;
+}
+
+.copyright {
+    margin: 15px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright hr {
+    display: block;
+    width: 65%;
+    margin: 5px auto;
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.5;
+}
+
+.copyright p {
+    color: #fff;
+    opacity: .6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 16pt;
+    margin: 0 10px;
+    padding-top: 22px;
+    padding-bottom: 2px;
+    cursor: context-menu;
+    transition: all .3s ease-in;
+    width: fit-content;
+}
+
+.copyright p:hover {
+    opacity: 1;
+}
